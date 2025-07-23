@@ -1,0 +1,191 @@
+.keyboard-table-wrapper {
+  outline: none;
+}
+
+/* Shows focus only when using keyboard, not mouse click */
+/* Ensures that only keyboard users see focus outlines (ideal UX).*/
+.keyboard-table-wrapper:focus-visible {
+  outline: 2px solid var(--accent-color, #00d0ff);
+}
+
+.data-table {
+  background-color: var(--color-bg); /* Dark mode background */
+  color: var(--color-text);
+
+  border-collapse: separate; /* switch from collapse so border-radius works */
+  border-spacing: 0; /* removes unwanted spacing */
+  border-radius: 8px;
+  overflow: hidden; /* ensures rounded corners clip children */
+
+  table-layout: fixed;
+  /* Prevents column width from changing based on content—important for stability */
+
+  width: 100%;
+  max-width: 800px;
+  /* Makes table responsive but maintains readable max width */
+
+  margin: 1rem auto;
+  /*border-radius: 8px; /* Does not work if border-collapse: separate */
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  /* Ensures long strings don't break layout */
+}
+
+.data-table th {
+  cursor: pointer; /* lets users know it's interactive */
+  position: relative;
+  background-color: var(--color-header-bg);
+}
+
+.data-table th.active-header {
+  font-weight: bold;
+  color: var(--accent-color, #00d0ff);
+}
+
+.data-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.data-table tr.even {
+  background-color: var(--color-row-even);
+}
+
+.data-table tr.odd {
+  background-color: var(--color-row-odd);
+}
+
+/* 
+  These rules apply border-radius to the four corners of the table.
+  Note: border-collapse must be set to 'separate' on .data-table for these to take visual effect.
+  This ensures only the outermost corners of the table are rounded—matching common design specs.
+*/
+.data-table th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.data-table th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.data-table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.data-table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+input {
+  background-color: var(--color-input-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-input-border);
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 4px;
+}
+
+mark {
+  background-color: #ffd54f; /* ensure contrast ≥ 4.5:1  */
+  color: black;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.active-row {
+  outline: 2px solid var(--accent-color, #00d0ff);
+  background-color: #39414f;
+}
+
+.search-status {
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: var(--color-subtle, #bbb);
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pagination-controls button {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-row-odd);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  /* 
+    Convert all table elements into block-level for small screens.
+    This stacks <thead>, <tbody>, <tr>, <th>, and <td> vertically,
+    so each row appears as its own card-like block.
+  */
+  .data-table,
+  .data-table thead,
+  .data-table tbody,
+  .data-table th,
+  .data-table td,
+  .data-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  /* Hide the table headers since we're using data-labels on each cell instead */
+  .data-table thead {
+    display: none;
+  }
+
+  /* 
+    Each <tr> now behaves like a standalone card.
+    We add margin, border, padding, and background to visually separate them.
+  */
+  .data-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: var(--color-row-even);
+  }
+
+  /* 
+    Each <td> stacks vertically within the card.
+    Padding ensures space between label/value pairs.
+  */
+  .data-table td {
+    text-align: left;
+    padding: 8px 0;
+    position: relative;
+  }
+
+  /* 
+    Use the data-label attribute to display the "header" for each cell.
+    This mimics a key-value layout (e.g., "Email: someone@example.com").
+  */
+  .data-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    color: var(--color-text);
+  }
+}
