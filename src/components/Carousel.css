@@ -1,0 +1,62 @@
+.carousel-section {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.carousel-card {
+  min-width: 120px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.carousel-text {
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.carousel-buttons button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin-left: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.carousel-buttons button:hover {
+  background-color: #555;
+}
