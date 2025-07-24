@@ -38,9 +38,24 @@
 
 .view-all-btn {
   font-size: 0.875rem;
-  color: #999;
+  font-weight: 600;
+  color: rgb(102, 190, 158);
   background: none;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  padding-bottom: 2px;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .view-all-btn {
+    padding-bottom: 3px;
+  }
+}
+
+.view-all-btn:hover,
+.view-all-btn:focus-visible {
   text-decoration: underline;
+  outline: none;
 }
