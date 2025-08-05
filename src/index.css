@@ -5,7 +5,13 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: rgb(27, 27, 28);
   color: #fff;
   font-family: system-ui, sans-serif;
+}
+
+.homepage-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
