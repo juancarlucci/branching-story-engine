@@ -1,0 +1,9 @@
+.section-wrapper {
+  max-width: 1200px;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
