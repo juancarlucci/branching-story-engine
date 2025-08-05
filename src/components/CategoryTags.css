@@ -1,42 +1,32 @@
 .category-section {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.category-header {
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  padding-left: 1rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  row-gap: 0.5rem;
 }
 
-.category-tag-list {
+/* .category-header {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  list-style: none;
-  padding: 0;
-}
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: baseline;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+} */
 
-.category-tag {
-  background-color: #444;
+/* .category-header h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
   color: #fff;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
+  margin: 0;
+} */
 
-.category-tag:hover,
-.category-tag:focus-visible {
-  background-color: #666;
-  outline: none;
-}
-
-.view-all-btn {
+/* .view-all-btn {
   font-size: 0.875rem;
   font-weight: 600;
   color: rgb(102, 190, 158);
@@ -44,8 +34,44 @@
   border: none;
   cursor: pointer;
   text-decoration: none;
-  padding-bottom: 2px;
+  padding-bottom: 3px;
   white-space: nowrap;
+  line-height: 1.25rem;
+} */
+
+.category-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 116px;
+  overflow: hidden;
+}
+
+.category-tag {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  max-height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-tag:hover,
+.category-tag:focus-visible {
+  background-color: #666;
+  outline: none;
 }
 
 @media (min-width: 1024px) {
