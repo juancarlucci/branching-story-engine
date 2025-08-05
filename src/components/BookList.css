@@ -1,7 +1,9 @@
 .book-container {
   width: 100%;
-  max-width: 800px;
   margin: 0 auto;
+  padding-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .book-list {
@@ -76,4 +78,30 @@
   color: #999;
   min-height: 2rem; /* prevent jumpy layout */
   font-style: italic;
+}
+
+@media (min-width: 1224px) {
+  .container {
+    max-width: 1224px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 990px) {
+  .container {
+    max-width: 990px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
 }
