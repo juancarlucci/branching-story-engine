@@ -1,7 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
+import CategoryHeader from "./CategoryHeader";
 import "./Carousel.css";
+import SectionWrapper from "./SectionWrapper";
 
-export default function Carousel({ books }) {
+export default function Carousel({ title, books, showIndexNumber = false, limit }) {
+  const visibleBooks = Array.isArray(books)
+    ? (limit ? books.slice(0, limit) : books)
+    : [];
   const scrollRef = useRef();
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
@@ -31,10 +37,9 @@ export default function Carousel({ books }) {
   };
 
   return (
-    <section className="carousel-section">
-      <div className="carousel-header">
-        <h2 className="carousel-title">Destined to Be Together</h2>
-      </div>
+    <SectionWrapper>
+           <CategoryHeader title={title} onViewAll={() => console.log(`View all ${title}`)} />
+
 
       <div className="carousel-wrapper">
         {canScrollLeft && (
@@ -48,10 +53,39 @@ export default function Carousel({ books }) {
         )}
 
         <div className="carousel-scroll" ref={scrollRef}>
-          {books.map((book) => (
-            <div key={book.id} className="carousel-card">
-              <img src={book.coverUrl} alt={book.title} className="carousel-img" />
-              <p className="carousel-text">{book.title}</p>
+          {visibleBooks.map((book, index) => (
+            
+            <div
+              role="group"
+              key={book.id ?? index}
+              aria-roledescription="slide"
+              className="carousel-card-wrapper card-relative"
+            >
+            
+              <div key={book.id} className="card-container">
+                <div
+                  key={book.id}
+                  className={`${["carousel-card-wrapper"]} ${[
+                    "card-relative",
+                  ]}`}
+                >
+                  {showIndexNumber && (
+                    <span className={"indexNumber"}>{index + 1}</span>
+                  )}
+                  <Link to={`/books/${book.id}`} className="card-link">
+                   <div
+                      className="card-image"
+                      style={{
+                        backgroundImage: `url("${book.coverUrl || 'https://picsum.photos/256/400?random=1'}")`
+                      }}
+                    ></div>
+                    <div className="card-text">
+                      <p className="card-title">{book.title}</p>
+                      <p className="card-author">by {book.author}</p>
+                    </div>
+                  </Link>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -66,6 +100,6 @@ export default function Carousel({ books }) {
           </button>
         )}
       </div>
-    </section>
+    </SectionWrapper>
   );
 }
