@@ -1,10 +1,8 @@
 // @ts-nocheck
-// import { fetchBooks } from "../lib/bookService";
 import { books as mockBooks } from "../data/mockBooks";
 import { useEffect, useState } from "react";
 import HeroBanner from "../components/HeroBanner";
 import Carousel from "../components/Carousel";
-// import BookList from "../components/BookList";
 import CategoryTags from "../components/CategoryTags";
 
 export default function HomePage() {
@@ -16,7 +14,7 @@ export default function HomePage() {
     );
 
   useEffect(() => {
-    setBooks(mockBooks); // no need for async
+    setBooks(mockBooks);
     setLoading(false);
   }, [books]);
 
