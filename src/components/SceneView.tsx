@@ -1,16 +1,22 @@
 //* src/components/SceneView.tsx
-import React from "react";
 import type { Scene } from "../types/scene";
-import "./SceneView.css"
+import "./SceneView.css";
 
 interface Props {
   scene: Scene;
   onChoice: (nextId: string) => void;
   onBack?: () => void;
   canGoBack?: boolean;
+  backLabel?: string;
 }
 
-export default function SceneView({ scene, onChoice, onBack, canGoBack }: Props) {
+export default function SceneView({
+  scene,
+  onChoice,
+  onBack,
+  canGoBack,
+  backLabel,
+}: Props) {
   return (
     <section className="scene-view">
       <p className="scene-text" role="region" aria-label="Scene Description">
@@ -30,9 +36,10 @@ export default function SceneView({ scene, onChoice, onBack, canGoBack }: Props)
       </div>
 
       {canGoBack && onBack && (
-        <button onClick={onBack} className="back-button" aria-label="Backtrack">
-          ⬅️ Go Back
-        </button>
+       <button className="back-button" onClick={onBack}>
+  {backLabel || "← Go Back"}
+</button>
+
       )}
     </section>
   );
