@@ -45,3 +45,45 @@
 .navbar-links a:hover {
   text-decoration: underline;
 }
+
+.navbar-logo-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.logo-vertical {
+  display: block;
+}
+
+.logo-horizontal {
+  display: none;
+}
+
+.logo-by {
+  font-size: 12px;
+  color: white;
+  margin: 0 6px;
+}
+
+@media (min-width: 768px) {
+  .navbar-logo-group {
+    position: static;
+    transform: none;
+    left: auto;
+  }
+
+  .logo-vertical {
+    display: none;
+  }
+
+  .logo-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
