@@ -31,3 +31,27 @@ export function useStoryTraversal(storyTree: StoryTree) {
 
   return { currentScene, goToScene, backtrack, reset, history };
 }
+
+export function getReachableScenes(tree: StoryTree, startId: string): Scene[] {
+  const visited = new Set<string>();
+  const queue = [startId];
+  const result: Scene[] = [];
+
+  while (queue.length) {
+    const currentId = queue.shift()!;
+    if (visited.has(currentId)) continue;
+
+    const scene = tree[currentId];
+    if (scene) {
+      result.push(scene);
+      visited.add(currentId);
+      scene.choices.forEach(choice => {
+        if (!visited.has(choice.nextSceneId)) {
+          queue.push(choice.nextSceneId);
+        }
+      });
+    }
+  }
+
+  return result;
+}

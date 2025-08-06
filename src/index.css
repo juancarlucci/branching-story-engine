@@ -1,3 +1,20 @@
+:root {
+  --green-primary: rgb(0, 146, 94);
+  --green-hover: rgb(51, 168, 126);
+  --yellow-accent: rgb(210, 255, 114);
+  --gray-dark: #1c1c1c;
+  --gray-darker: #0f0f0f;
+  --white: #ffffff;
+  --text-muted: #ccc;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+}
 * {
   box-sizing: border-box;
 }
