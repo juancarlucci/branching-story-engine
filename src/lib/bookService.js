@@ -1,3 +1,5 @@
+import { books } from "../data/mockBooks";
+
 export async function fetchBooks() {
   const res = await fetch("https://dummyjson.com/products?limit=50");
   if (!res.ok) throw new Error("Failed to fetch books");
@@ -10,4 +12,10 @@ export async function fetchBooks() {
     coverUrl: p.thumbnail,
     genres: [p.category],
   }));
+}
+export function getBookById(id) {
+  return new Promise((resolve) => {
+    const book = books.find((b) => b.id === Number(id));
+    setTimeout(() => resolve(book), 300); // Simulate network latency
+  });
 }
