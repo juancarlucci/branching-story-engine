@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { highlightMatch } from "../utils"; 
+import { highlightMatch } from "../../utils";
 
 export default function DataTable() {
   const [data, setData] = useState([]);
@@ -128,12 +128,14 @@ export default function DataTable() {
             filtered.length > 0 &&
             filtered.length > 0 &&
             sortedData.map((user, index) => (
-            <tr key={user.id} className={index % 2 === 0 ? "even" : "odd"}>
-              <td data-label="Name">{highlightMatch(user.name, query)}</td>
-              <td data-label="Email">{highlightMatch(user.email, query)}</td>
-              <td data-label="Company">{highlightMatch(user.company.name, query)}</td>
-            </tr>
-          ))}
+              <tr key={user.id} className={index % 2 === 0 ? "even" : "odd"}>
+                <td data-label="Name">{highlightMatch(user.name, query)}</td>
+                <td data-label="Email">{highlightMatch(user.email, query)}</td>
+                <td data-label="Company">
+                  {highlightMatch(user.company.name, query)}
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
