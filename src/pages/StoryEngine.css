@@ -56,3 +56,11 @@
   font-size: var(--font-size-lg);
   margin-bottom: 0.5rem;
 }
+
+.path-history {
+  margin-top: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  max-width: 600px;
+  text-align: left;
+}

@@ -23,7 +23,12 @@ export default function StoryEngine() {
           canGoBack={history.length > 0}
         />
       </div>
-
+      {history.length > 0 && (
+        <div className="path-history">
+          <strong>Path so far:</strong>{" "}
+          {history.map((scene) => scene.id).join(" → ")} → {currentScene.id}
+        </div>
+      )}
       <button className="explanation-toggle" onClick={() => setShowExplanation(!showExplanation)}>
         {showExplanation ? "Hide Explanation" : "Why BFS?"}
       </button>
