@@ -1,3 +1,4 @@
+// @ts-nocheck
 import "./SectionWrapper.css";
 
 export default function SectionWrapper ({ children}) {

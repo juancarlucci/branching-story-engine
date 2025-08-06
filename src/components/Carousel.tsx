@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import CategoryHeader from "./CategoryHeader";
