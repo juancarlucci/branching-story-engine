@@ -42,7 +42,23 @@ Built as a technical capstone for a frontend interview with **Inkitt**, this pro
 
 ---
 
-## 🧰 Architecture
+## 🧠 Architecture Overview
+
+The app uses locally mocked data (`mockBooks.js` and `storyTree.ts`) to simulate a real-world backend. Originally, I started with a basic utility module (`bookService.js`) to keep things modular. But as the UI evolved and required richer data (like nested genres and chapters), I transitioned to directly importing full mock datasets for flexibility during development.
+
+To demonstrate real-world data fetching, I refactored the `BookDetail` component to use **React Query**, even though it still pulls from mock data. This simulates async fetching with latency, enables caching, and shows how I’d scale the app with a real API later.
+
+### Common Questions & Answers
+
+**Q: Why React Query for mock data?**  
+Because it lets me simulate real-world async flows: loading states, caching, etc. It's future-proof — I could swap in `fetch` or Axios without rewriting UI logic.
+
+**Q: Why not Context or Zustand?**  
+I considered them, but the state is mostly local, and the app is read-heavy. Zustand or Context would be more useful if multiple components needed to sync shared state, like filters or bookmarks.
+
+---
+
+## 🧰 Architecture - structure
 
 ```
 src/
