@@ -1,5 +1,5 @@
 // @ts-nocheck
-//* src/pages/AllCategoriesPage.js
+//* src/pages/AllCategoriesPage.tsx
 import { categories } from "../data/categories";
 import "./AllCategories.css";
 

@@ -1,7 +1,15 @@
-// @ts-nocheck
+import { JSX } from 'react';
 import './CategoryHeader.css';
 
-export default function CategoryHeader({ title, onViewAll }) {
+interface CategoryHeaderProps {
+  title: string;
+  onViewAll: () => void;
+}
+
+export default function CategoryHeader({
+  title,
+  onViewAll,
+}: CategoryHeaderProps): JSX.Element {
   return (
     <div className="category-header">
       <h2>{title}</h2>

@@ -1,14 +1,15 @@
-// @ts-nocheck
-import { books as mockBooks } from "../data/mockBooks";
 import { useEffect, useState } from "react";
+import { books as mockBooks } from "../data/mockBooks";
 import HeroBanner from "../components/HeroBanner";
 import Carousel from "../components/Carousel";
 import CategoryTags from "../components/CategoryTags";
+import { Book } from "../types";
 
 export default function HomePage() {
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState<Book[]>([]);
   const [, setLoading] = useState(true);
-  const booksByCategory = (genre) =>
+
+  const booksByCategory = (genre: string): Book[] =>
     books.filter((book) =>
       book.genres?.some((g) => g.toLowerCase() === genre.toLowerCase())
     );
@@ -27,7 +28,7 @@ export default function HomePage() {
           books={booksByCategory("Destined")}
         />
       )}
-      <CategoryTags onTagClick={(tag) => console.log("Filter by:", tag)} />
+      <CategoryTags onTagClick={(tag: string) => console.log("Filter by:", tag)} />
       {booksByCategory("CEO & Boss").length > 0 && (
         <Carousel title="CEO & Boss" books={booksByCategory("CEO & Boss")} />
       )}

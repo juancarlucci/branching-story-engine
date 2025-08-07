@@ -1,5 +1,5 @@
 // src/pages/StoryEngine.tsx
-import React, { useState } from "react";
+import { useState } from "react";
 import { storyTree } from "../data/storyTree";
 import SceneView from "../components/SceneView";
 import { useStoryTraversal } from "../hooks/useStoryTraversal";
