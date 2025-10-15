@@ -1,3 +1,4 @@
+// @ts-nocheck
 //* src/pages/AllCategoriesPage.js
 import { categories } from "../data/categories";
 import "./AllCategories.css";

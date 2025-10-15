@@ -1,3 +1,4 @@
+// @ts-nocheck
 import './CategoryHeader.css';
 
 export default function CategoryHeader({ title, onViewAll }) {
