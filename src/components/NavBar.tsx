@@ -6,16 +6,23 @@ export default function NavBar() {
   return (
     <header className="navbar-header">
       <div className="navbar-inner">
-        <Link to="/" className="navbar-logo-group" aria-label="Go to homepage">
-          {/* Mobile-only vertical logo */}
+        {/* Mobile hamburger */}
+        <div className="nav-hamburger" role="button" aria-label="Menu">
+          ☰
+        </div>
+
+        {/* Mobile: vertical logo */}
+        <Link to="/" className="nav-logo-mobile" aria-label="Go to homepage">
           <img
-            className="logo-vertical"
-            src="/galatea-logo-solo.webp"
+            src="/galatea-logo-vertical.webp"
             alt="Galatea logo"
             width="110"
             height="32"
           />
-          {/* Desktop logo row */}
+        </Link>
+
+        {/* Desktop: horizontal logo group */}
+        <Link to="/" className="navbar-logo-group" aria-label="Go to homepage">
           <div className="logo-horizontal">
             <img
               src="/galatea-logo-solo.webp"
@@ -33,8 +40,14 @@ export default function NavBar() {
           </div>
         </Link>
 
+        {/* Links */}
         <nav className="navbar-links">
-          <Link to="/categories">Categories</Link>
+          <a href="/en/p/subscription" className="nav-cta">
+            Get Unlimited Access
+          </a>
+          <Link to="/categories" className="nav-link-desktop-only">
+            Categories
+          </Link>
           <Link to="/login">Log In</Link>
           <Link to="/story">Story Engine</Link>
         </nav>
@@ -42,4 +55,3 @@ export default function NavBar() {
     </header>
   );
 }
-
