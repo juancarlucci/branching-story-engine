@@ -1,6 +1,7 @@
 //* src/components/SceneView.tsx
 import React from "react";
 import type { Scene } from "../types/scene";
+import "./SceneView.css"
 
 interface Props {
   scene: Scene;
