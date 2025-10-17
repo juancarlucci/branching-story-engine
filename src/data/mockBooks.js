@@ -353,7 +353,7 @@ genres: [
     "The Witch’s Secret",
     "Bound by Fate"
   ],
-    genres: ["Paranormal & Fantasy", "Witches & Wizards", "Angels & Demons", "Destined"],
+    genres: ["Paranormal & Fantasy", "Witches & Wizards", "Angels & Demons"],
   },
   {
     id: 20,
@@ -952,11 +952,11 @@ genres: [
   },
   {
     id: 55,
-    reads: 120,
+    reads: 12.8,
     ageRating: "18+",
-    title: "Fated by Stars",
-    author: "Selene Drake",
-    coverUrl: "https://picsum.photos/256/400?random=55",
+    title: "Luna Graced",
+    author: "KristiferAnn Throne",
+    coverUrl: "https://images-cdn.getgalatea.com/uploads/story/cover/8096/medium_1725450839_b5190e893770536cdca76e56dcc22fec.jpg",
     summary: "Two psychics are bound by a cosmic prophecy.",
     chapters: [
     "The Pact",
@@ -965,15 +965,15 @@ genres: [
     "The Witch’s Secret",
     "Bound by Fate"
   ],
-    genres: ["Destined", "Psychics", "Paranormal & Fantasy", "Romance"],
+    genres: ["Destined", "Werewolves & Shifters", "Rejected Mate", "Drama", "Second Chances","Forbidden Romance","True Mate" ,"Dark", "Sexy","Protector",'Paranormal & Fantasy',"Alpha Males","Romance","Strong Women","Age Gap"],
   },
   {
     id: 56,
-    reads: 120,
+    reads: 10,
     ageRating: "18+",
-    title: "Eternal Flame",
-    author: "Rory Blaze",
-    coverUrl: "https://picsum.photos/256/400?random=56",
+    title: "The Edge of Reason",
+    author: "Michelle Torlot",
+    coverUrl: "https://images-cdn.getgalatea.com/uploads/story/cover/8139/medium_1736273046_87c7332632ad401afccd0b2c4bf8d99b.jpg",
     summary: "A dragon shifter meets his destined mate.",
     chapters: [
     "The Pact",
@@ -982,11 +982,11 @@ genres: [
     "The Witch’s Secret",
     "Bound by Fate"
   ],
-    genres: ["Destined", "Dragons", "Fated Mates", "Paranormal & Fantasy"],
+    genres: ["Destined", "Werewolves & Shifters", "Royalty & Aristocrats", "Drama", "Second Chances","Forbidden Romance","True Mate" ,"Dark", "Sexy","Protector",'Paranormal & Fantasy',"Alpha Males","Romance","Strong Women","Age Gap"],
   },
   {
     id: 57,
-    reads: 120,
+    reads: 10.0,
     ageRating: "18+",
     title: "Rival Hearts",
     author: "Kael Storm",
@@ -999,7 +999,7 @@ genres: [
     "The Witch’s Secret",
     "Bound by Fate"
   ],
-    genres: ["Enemies to Lovers", "CEO & Boss", "Contemporary", "Spicy"],
+    genres: ["Destined", "Werewolves & Shifters", "Royalty & Aristocrats", "Drama", "Second Chances","Forbidden Romance","True Mate" ,"Dark", "Sexy","Protector",'Paranormal & Fantasy',"Alpha Males","Romance","Strong Women","Age Gap"],
   },
   {
     id: 58,
@@ -1016,7 +1016,7 @@ genres: [
     "The Witch’s Secret",
     "Bound by Fate"
   ],
-    genres: ["Enemies to Lovers", "Vampires", "Paranormal & Fantasy", "Romance"],
+    genres: ["Destined", "Werewolves & Shifters", "Royalty & Aristocrats", "Drama", "Second Chances","Forbidden Romance","True Mate" ,"Dark", "Sexy","Protector",'Paranormal & Fantasy',"Alpha Males","Romance","Strong Women","Age Gap"],
   },
   {
     id: 59,
@@ -1033,7 +1033,7 @@ genres: [
     "The Witch’s Secret",
     "Bound by Fate"
   ],
-    genres: ["Fake Dating", "Contemporary", "Billionaires", "Romance"],
+    genres: ["Destined", "Werewolves & Shifters", "Royalty & Aristocrats", "Drama", "Second Chances","Forbidden Romance","True Mate" ,"Dark", "Sexy","Protector",'Paranormal & Fantasy',"Alpha Males","Romance","Strong Women","Age Gap"],
   },
   {
     id: 60,
@@ -1050,7 +1050,7 @@ genres: [
     "The Witch’s Secret",
     "Bound by Fate"
   ],
-    genres: ["Fake Dating", "Celebrities", "Romance", "Comedy"],
+    genres: ["Destined", "Werewolves & Shifters", "Royalty & Aristocrats", "Drama", "Second Chances","Forbidden Romance","True Mate" ,"Dark", "Sexy","Protector",'Paranormal & Fantasy',"Alpha Males","Romance","Strong Women","Age Gap"],
   },
   {
     id: 61,
@@ -1067,7 +1067,7 @@ genres: [
     "The Witch’s Secret",
     "Bound by Fate"
   ],
-    genres: ["Fated Mates", "Werewolves & Shifters", "Paranormal & Fantasy", "Romance"],
+    genres: ["Destined", "Werewolves & Shifters", "Royalty & Aristocrats", "Drama", "Second Chances","Forbidden Romance","True Mate" ,"Dark", "Sexy","Protector",'Paranormal & Fantasy',"Alpha Males","Romance","Strong Women","Age Gap"],
   },
   {
     id: 62,
