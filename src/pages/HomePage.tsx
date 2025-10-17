@@ -21,10 +21,10 @@ export default function HomePage() {
   return (
     <div className="homepage-wrapper">
       <HeroBanner />
-      {booksByCategory("Romance").length > 0 && (
+      {booksByCategory("Destined").length > 0 && (
         <Carousel
           title="Destined to Be Together"
-          books={booksByCategory("Romance")}
+          books={booksByCategory("Destined")}
         />
       )}
       <CategoryTags onTagClick={(tag) => console.log("Filter by:", tag)} />
