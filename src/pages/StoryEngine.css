@@ -75,7 +75,7 @@
 }
 
 .traversal-panel {
-  background-color: #1c1c1c;
+  background-color: var(--gray-dark);
   padding: 1rem;
   border-radius: var(--radius-md);
   flex: 1;
