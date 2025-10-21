@@ -64,3 +64,47 @@
   max-width: 600px;
   text-align: left;
 }
+
+.traversal-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.traversal-panel {
+  background-color: #1c1c1c;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .traversal-columns {
+    flex-direction: row;
+  }
+}
+
+.dfs-explanation,
+.bfs-explanation {
+  margin-top: 1rem;
+  background-color: #222;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.reachable-list ul {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--white);
+}
+
+.path-history {
+  font-size: 0.9rem;
+  color: var(--white);
+}

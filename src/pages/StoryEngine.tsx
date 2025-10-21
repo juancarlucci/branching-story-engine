@@ -29,27 +29,50 @@ export default function StoryEngine() {
           {history.map((scene) => scene.id).join(" → ")} → {currentScene.id}
         </div>
       )}
-      <button className="explanation-toggle" onClick={() => setShowExplanation(!showExplanation)}>
-        {showExplanation ? "Hide Explanation" : "Why BFS?"}
-      </button>
+      <div className="traversal-columns">
+  {/* BFS Column */}
+  <div className="traversal-panel">
+    <button className="explanation-toggle" onClick={() => setShowExplanation(!showExplanation)}>
+      {showExplanation ? "Hide BFS Explanation" : "Why BFS?"}
+    </button>
 
-      {showExplanation && (
-        <div className="bfs-explanation">
-          <p>
-            This story engine uses <strong>Breadth-First Search (BFS)</strong> to identify all reachable scenes from the current point in the story. 
-            This ensures that even branching paths and alternate endings can be previewed or visualized — mimicking Galatea’s dynamic narrative engine.
-          </p>
-        </div>
-      )}
-
-      <div className="reachable-list">
-        <h2>Reachable Scenes:</h2>
-        <ul>
-          {reachable.map(scene => (
-            <li key={scene.id}>{scene.id} — {scene.text.slice(0, 40)}…</li>
-          ))}
-        </ul>
+    {showExplanation && (
+      <div className="bfs-explanation">
+        <p>
+          This engine uses <strong>Breadth-First Search (BFS)</strong> to discover all scenes reachable from the current one.
+          This is useful for debugging, visualizing alternate endings, and building full story maps.
+        </p>
       </div>
+    )}
+
+    <div className="reachable-list">
+      <h2>Reachable Scenes:</h2>
+      <ul>
+        {reachable.map(scene => (
+          <li key={scene.id}>{scene.id} — {scene.text.slice(0, 40)}…</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  {/* DFS Column */}
+  <div className="traversal-panel">
+    <div className="path-history">
+      <h2>Current Path (DFS):</h2>
+      <p>
+        {history.map((scene) => scene.id).join(" → ")} → <strong>{currentScene.id}</strong>
+      </p>
+    </div>
+
+    <div className="dfs-explanation">
+      <p>
+        This path is derived via <strong>Depth-First Search (DFS)</strong> — exploring each scene deeply along one path before backtracking.
+        It's ideal for simulating linear story immersion or alternate endings, just like Galatea's chat narratives.
+      </p>
+    </div>
+  </div>
+</div>
+
     </main>
   );
 }
