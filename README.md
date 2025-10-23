@@ -36,32 +36,42 @@ Built as a technical capstone for a frontend interview with **Inkitt**, this pro
 
 ## 🧠 Architecture
 
+```
 src/
 ├── components/
-│ ├── SceneView.tsx // Story node UI
-│ ├── D3TreeViewer.tsx // Optional: tree visualization
+│   ├── SceneView.tsx        // Story node UI
+│   ├── D3TreeViewer.tsx     // Optional: tree visualization
 ├── data/
-│ └── storyTree.ts // Story graph definition
+│   └── storyTree.ts         // Story graph definition
 ├── hooks/
-│ └── useStoryTraversal.ts // Custom hook with BFS + DFS logic
+│   └── useStoryTraversal.ts // Custom hook with BFS + DFS logic
 ├── pages/
-│ └── StoryEngine.tsx // Story engine main entry
+│   └── StoryEngine.tsx      // Story engine main entry
 ├── types/
-│ └── scene.ts // Scene + tree typings
+│   └── scene.ts             // Scene + tree typings
 ├── styles/
-│ └── *.css // Theme tokens + layout
+│   └── *.css                // Theme tokens + layout
+```
+
+---
 
 ## 🚀 Run It Locally
+
+```bash
 npm install
 npm run dev
+```
 
-#### Navigate to /story in your browser to start reading.
+Then open your browser to [http://localhost:3000/story](http://localhost:3000/story)
+
+---
 
 ## 🧪 BFS vs DFS Usage
 
-### BFS (Breadth-First Search):
-Used to preview all reachable scenes from the current scene — helpful for mapping story structure or debugging branching logic.
+**BFS** (Breadth-First Search):  
+Used to preview *all reachable scenes* from the current node — helpful for mapping story structure or debugging logic.
 
-### DFS (Depth-First Search):
-Used to model the user’s current path — a single storyline, from root to current scene. Ideal for simulating immersive reads or alternate endings.
+**DFS** (Depth-First Search):  
+Used to model the *user’s current path* — a single immersive storyline, from root to current scene. Ideal for alternate endings or nonlinear depth.
 
+---
