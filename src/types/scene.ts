@@ -4,10 +4,10 @@ export type Choice = {
   nextSceneId: string;
 };
 
-export type Scene = {
+export interface Scene {
   id: string;
   text: string;
-  choices: Choice[];
-};
+  choices: { text: string; nextSceneId: string }[];
+}
 
 export type StoryTree = Record<string, Scene>;

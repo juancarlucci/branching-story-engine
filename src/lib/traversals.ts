@@ -1,5 +1,5 @@
-// lib/traversals.ts
-import { StoryTree, Scene } from "../types/scene";
+import type { StoryTree } from "../types/scene";
+import type { Scene } from "../types/scene";
 
 // Breadth-First Search to get reachable scenes
 export function bfsTraversal(startId: string, tree: StoryTree): Scene[] {
@@ -24,19 +24,21 @@ export function bfsTraversal(startId: string, tree: StoryTree): Scene[] {
   return result;
 }
 
-// Depth-First Path: builds path from root to a target node
+// Depth-First Search to get a path to a target scene
 export function dfsPath(
   tree: StoryTree,
   targetId: string,
-  currentId = "start",
+  currentId: string = "start",
   path: string[] = []
 ): string[] {
   path.push(currentId);
   if (currentId === targetId) return path;
 
   const currentScene = tree[currentId];
+  if (!currentScene) return [];
+
   for (const choice of currentScene.choices) {
-    const result: string[] = dfsPath(tree, targetId, choice.nextSceneId, [...path]);
+    const result = dfsPath(tree, targetId, choice.nextSceneId, [...path]);
     if (result.includes(targetId)) return result;
   }
 
