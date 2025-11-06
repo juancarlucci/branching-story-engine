@@ -16,7 +16,7 @@ export default function HomePage() {
   useEffect(() => {
     setBooks(mockBooks);
     setLoading(false);
-  }, [books]);
+  }, []);
 
   return (
     <div className="homepage-wrapper">
