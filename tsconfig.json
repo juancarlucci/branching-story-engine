@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "jsx": "react-jsx", // ✅ for React 17+ with new JSX transform
+    "types": ["react"],
+    "target": "es2020",
+    "lib": ["DOM", "ES2016"],
     "module": "ESNext",
-    "jsx": "react-jsx",
     "strict": true,
     "moduleResolution": "Node",
     "esModuleInterop": true,
