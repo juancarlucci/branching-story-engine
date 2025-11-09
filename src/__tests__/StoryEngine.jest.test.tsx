@@ -1,16 +1,17 @@
-// src/__tests__/StoryEngine.jest.test.tsx
+//* src/__tests__/StoryEngine.jest.test.tsx
 import { render, screen, fireEvent } from "@testing-library/react";
 import StoryEngine from "../pages/StoryEngine";
 import "@testing-library/jest-dom";
 
-// 🧪 Test 1: Starting scene renders correctly
+
+//* 🧪 Test 1: Starting scene renders correctly
 test("renders the starting scene", () => {
   render(<StoryEngine />);
   const scenes = screen.getAllByText(/You wake beneath blood-colored skies/i);
   expect(scenes.length).toBeGreaterThan(0);
 });
 
-// 🧪 Test 2: Navigates forward correctly
+//* 🧪 Test 2: Navigates forward correctly
 test("navigates forward via a user choice", () => {
   render(<StoryEngine />);
   const lookAroundBtn = screen.getByRole("button", { name: /look around/i });
@@ -19,7 +20,7 @@ test("navigates forward via a user choice", () => {
   expect(followups.length).toBeGreaterThan(0);
 });
 
-// 🧪 Test 3: Backtrack returns to the previous scene
+//* 🧪 Test 3: Backtrack returns to the previous scene
 test("goes back to previous scene using Go Back button", () => {
   render(<StoryEngine />);
   const lookAroundBtn = screen.getByRole("button", { name: /look around/i });
@@ -30,7 +31,7 @@ test("goes back to previous scene using Go Back button", () => {
   expect(origin.length).toBeGreaterThan(0);
 });
 
-// 🧪 Test 4: BFS and DFS panels are visible
+//* 🧪 Test 4: BFS and DFS panels are visible
 test("renders traversal side panels with reachable scenes and DFS path", () => {
   render(<StoryEngine />);
   expect(screen.getByText(/Reachable Scenes/i)).toBeInTheDocument();
